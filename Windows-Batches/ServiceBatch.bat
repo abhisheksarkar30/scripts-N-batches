@@ -14,9 +14,13 @@ echo -------------------------
 %sep% %dir%\launch ServiceController
 timeout 10 > NUL
 echo -------------------------------------------
-echo    MessageRouter ITF TRD STL CAM NCM GLE
+echo    MessageRouter REF ITF TRD STL CAM NCM GLE
 echo -------------------------------------------
-%sep% %dir%\launch MessageRouter %sw% ITF TRD STL CAM NCM GLE
+%sep% %dir%\launch MessageRouter %sw% REF ITF TRD STL CAM NCM GLE
+echo -----------------------
+echo    MonitorService REF
+echo -----------------------
+%sep% %dir%\launch MonitorService %sw% -c REF
 echo -----------------------
 echo    MonitorService ITF
 echo -----------------------
