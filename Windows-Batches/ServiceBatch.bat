@@ -16,7 +16,7 @@ timeout 10 > NUL
 echo -------------------------------------------
 echo    MessageRouter REF ITF TRD STL CAM NCM GLE
 echo -------------------------------------------
-%sep% %dir%\launch MessageRouter %sw% REF ITF TRD STL CAM NCM GLE
+%sep% %dir%\launch MessageRouter %sw% REF ITF TRD STL CAM NCM GLE CAX
 echo -----------------------
 echo    MonitorService REF
 echo -----------------------
@@ -25,6 +25,10 @@ echo -----------------------
 echo    MonitorService ITF
 echo -----------------------
 %sep% %dir%\launch MonitorService %sw% -c ITF
+echo -----------------------
+echo    MonitorService CAX
+echo -----------------------
+%sep% %dir%\launch MonitorService %sw% -c CAX
 echo -----------------------
 echo    MonitorService TRD
 echo -----------------------
