@@ -1,8 +1,10 @@
 @echo off
-set JAVA_HOME=C:\Program Files\Java\jdk1.6.0_23
+set JAVA_HOME=%JAVA6HOME%
 setlocal
 REM cd /d %CODEBASE%
-if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Drest -Ddeployments=gv-aus)
+if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Drest -Ddeployments=gv-aus %1 %2)
+echo Exit Code = %ERRORLEVEL%
+if not "%ERRORLEVEL%" == "0" exit /b
 if exist gv-deployments\gv-dist\target\igv-console.zip (
 rd /s/q gv-deployments\gv-dist\target\igv-console
 Call :UnZipFile "%CD%\gv-deployments\gv-dist\target\igv-console" "%CD%\gv-deployments\gv-dist\target\igv-console.zip"

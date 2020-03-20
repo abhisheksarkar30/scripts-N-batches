@@ -1,8 +1,10 @@
 @echo off
-set JAVA_HOME=C:\Program Files\Java\jdk1.6.0_23
+set JAVA_HOME=%JAVA6HOME%
 setlocal
 REM cd /d %CODEBASE%
-if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Ddeployments=gv-aus)
+if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Ddeployments=gv-aus %1 %2)
+echo Exit Code = %ERRORLEVEL%
+if not "%ERRORLEVEL%" == "0" exit /b
 if exist gv-deployments\gv-dist\target\igv-tomcat.war (
 del %CATALINA_HOME%\webapps\igv-*.war
 rd /s/q %CATALINA_HOME%\webapps\igv-tomcat
