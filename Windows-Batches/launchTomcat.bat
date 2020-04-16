@@ -1,5 +1,5 @@
 @echo off
-set JAVA_HOME=%JAVA6HOME%
+REM JAVA_HOME=%JAVA6HOME%
 setlocal
 REM cd /d %CODEBASE%
 if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Ddeployments=gv-aus %1 %2)

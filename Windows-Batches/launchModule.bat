@@ -1,5 +1,5 @@
 @echo off
-set JAVA_HOME=%JAVA6HOME%
+REM JAVA_HOME=%JAVA6HOME%
 setlocal
 if not "%1"=="r" (call mvn clean install -Dmaven.test.skip)
 set /a count=0
