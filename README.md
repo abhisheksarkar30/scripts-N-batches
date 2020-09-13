@@ -15,7 +15,6 @@ The compatibility of language of each script varying on type of operating system
 
 ## Usage
 Depends on type of script as follows:
-1. Python - python \<filename>.py \<arguments> (all OS)
-2. Windows batch - \<filename> \<arguments> (windows only)
-3. Powershell - .\\\<filename>.ps1 \<arguments> (windows only)
-4. Shell - ./\<filename>.sh \<arguments> (linux only)
+1. Windows batch - \<filename> \<arguments> (windows only)
+2. Powershell - .\\\<filename>.ps1 \<arguments> (windows only)
+3. Shell - ./\<filename>.sh \<arguments> (linux only)
