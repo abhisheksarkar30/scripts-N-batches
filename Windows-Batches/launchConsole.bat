@@ -2,7 +2,7 @@
 REM JAVA_HOME=%JAVA6HOME%
 setlocal
 REM cd /d %CODEBASE%
-if not "%1"=="r" (call build clean install -Dmaven.test.skip -Dall -Drest -Ddeployments=gv-aus %1 %2)
+if not "%1"=="r" (call mvn clean install -Dmaven.test.skip -Dall -Drest -Ddeployments=gv-aus %1 %2)
 echo Exit Code = %ERRORLEVEL%
 if not "%ERRORLEVEL%" == "0" exit /b
 if exist gv-deployments\gv-dist\target\igv-console.zip (
