@@ -31,4 +31,5 @@ move E:\igv-console E:\igv-console-backup
 md E:\igv-console
 xcopy gv-deployments\gv-dist\target\igv-console E:\igv-console /E/S
 copy "C:\Users\abhisheksa\Desktop\Batch-Files\Exchange-Files\log4j-debug.properties" E:\igv-console\CONSOLE-INF\classes\log4j.properties
+copy "C:\Users\abhisheksa\Desktop\Batch-Files\Exchange-Files\igv\*" E:\igv-console
 )
